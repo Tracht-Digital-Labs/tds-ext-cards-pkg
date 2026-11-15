@@ -27,6 +27,7 @@ composer install && composer test   # phpunit
 - Migrations: band `20260929`, file name maps to class, unsigned `*_id`, no adapter internals, never delete a migration.
 - Call the API with `apiFetch`. Never mount a `ToastHost`. No CSS.
 - Stay in the `0.1.x` line (the host pins `^0.1.x`). Versions move via the release workflow only.
+- Follows the TDS quality standard (`../tds-ops/standards/quality.md`): no AI slop, clean code.
 
 ## Topic files
 

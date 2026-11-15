@@ -23,7 +23,7 @@ return [
         'summary' => 'Eine veröffentlichte Visitenkarte, per Host oder per Adresse',
         'description' => 'Die Route, mit der `tds-card-frontend` beim Rendern entscheidet, welche '
             . 'Karte ein Besucher sieht. `host` gewinnt, `slug` ist der Rückfall auf '
-            . '`karte.tracht-digital.de`. Entwürfe sind hier nicht erreichbar — der Filter steht '
+            . '`karte.tracht-digital.de`. Entwürfe sind hier nicht erreichbar, der Filter steht '
             . 'in SQL, nicht im PHP. Antwortet mit 404 und `{card: null}`, wenn nichts passt; '
             . 'eine 404 wird nie gecacht, also wirkt eine Veröffentlichung sofort.',
         'auth' => 'public',
@@ -34,7 +34,7 @@ return [
         ],
         'responses' => [
             ['status' => 200, 'description' => '`{card: {...}}`'],
-            ['status' => 404, 'description' => '`{card: null}` — unbekannt oder nicht veröffentlicht'],
+            ['status' => 404, 'description' => '`{card: null}`, unbekannt oder nicht veröffentlicht'],
         ],
     ],
     [
@@ -42,7 +42,7 @@ return [
         'pattern' => '/content/cards',
         'summary' => 'Index aller veröffentlichten Karten (nur Adressen)',
         'description' => 'Absichtlich nicht die ganzen Karten: das Frontend löst daraus seine '
-            . 'Sitemap, seine Cache-Ereignisse und seine Rebuild-Liste auf — mehrmals je Rebuild. '
+            . 'Sitemap, seine Cache-Ereignisse und seine Rebuild-Liste auf, mehrmals je Rebuild. '
             . 'Zählt im Einrichtungsassistenten als Verbindungsprobe.',
         'auth' => 'public',
         'tag' => 'Öffentlich',
@@ -56,7 +56,7 @@ return [
         'summary' => 'Portrait oder Logo einer veröffentlichten Karte',
         'description' => 'Ohne Anmeldung, weil ein `<img>` von einer anderen Domain ohnehin keine '
             . 'Anmeldedaten sendet. Antwortet `304` über ein schwaches ETag, ohne den Blob zu '
-            . 'lesen, und setzt `X-Content-Type-Options: nosniff` — die Bytes kommen von '
+            . 'lesen, und setzt `X-Content-Type-Options: nosniff`, die Bytes kommen von '
             . 'Benutzern und liegen auf derselben Domain wie das Sitzungs-Cookie.',
         'auth' => 'public',
         'tag' => 'Öffentlich',
@@ -86,7 +86,7 @@ return [
         'pattern' => '/cards',
         'summary' => 'Eine Karte anlegen',
         'description' => 'Ohne `slug` wird einer aus `displayName` oder `companyName` '
-            . 'vorgeschlagen — so legt die Bestellübergabe aus dem Shop eine Karte an, die nur '
+            . 'vorgeschlagen, so legt die Bestellübergabe aus dem Shop eine Karte an, die nur '
             . 'einen Firmennamen kennt. Die Karte ist immer erst ein Entwurf.',
         'auth' => 'permission',
         'permission' => 'cards:write',
@@ -172,7 +172,7 @@ return [
         'pattern' => '/cards/{slug:[a-z0-9-]+}/image/{kind:portrait|logo}',
         'summary' => 'Portrait oder Logo hochladen (multipart, Feld `file`)',
         'description' => 'Der angegebene Medientyp wird ignoriert; `getimagesizefromstring()` liest '
-            . 'die Bytes. PNG, JPEG, WebP — **kein SVG**: das ist ein Dokument und kann ein Skript '
+            . 'die Bytes. PNG, JPEG, WebP: **kein SVG**: das ist ein Dokument und kann ein Skript '
             . 'tragen. Es wird serverseitig nicht skaliert, weil `ext-gd` auf dem Host nicht '
             . 'garantiert ist; das Panel verkleinert vorher im Browser.',
         'auth' => 'permission',
@@ -219,7 +219,7 @@ return [
         'pattern' => '/cards/{slug:[a-z0-9-]+}/cache/rebuild',
         'summary' => 'Die Seiten einer Karte neu bauen lassen',
         'description' => 'Sendet ein Ereignis, keine Pfade: welche Adressen eine Karte besitzt, '
-            . 'weiß das Frontend. Der Status sagt, ob wirklich eine Anfrage rausging — '
+            . 'weiß das Frontend. Der Status sagt, ob wirklich eine Anfrage rausging: '
             . '`not_configured` ist der normale Zustand vor der Kopplung.',
         'auth' => 'permission',
         'permission' => 'cards:write',

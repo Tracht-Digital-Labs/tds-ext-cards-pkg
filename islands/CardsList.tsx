@@ -90,7 +90,7 @@ function cacheNote(report: CacheReport): { variant: "success" | "warning"; messa
     case "not_configured":
       return {
         variant: "warning",
-        message: "Gespeichert. Die Kartenseite ist noch nicht verbunden — die öffentlichen Seiten sind unverändert.",
+        message: "Gespeichert. Die Kartenseite ist noch nicht verbunden, die öffentlichen Seiten sind unverändert.",
       };
     case "failed":
       return { variant: "warning", message: "Gespeichert. Das Neubauen hat nicht geklappt." };
