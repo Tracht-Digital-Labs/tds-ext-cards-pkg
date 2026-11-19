@@ -4,7 +4,7 @@ import {
   CARD_BLOCK_CATALOG,
   type CardBlock,
   type CardBlockType,
-} from "@tracht-digital-solutions/tds-shared/schemas";
+} from "@tracht-digital-labs/tds-shared/schemas";
 
 /**
  * The free blocks of a card, as an ordered list you can add to and reorder.

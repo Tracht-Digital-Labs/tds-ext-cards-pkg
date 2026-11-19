@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useState } from "react";
 
-import { apiFetch, apiUrl, sendJson } from "@tracht-digital-solutions/tds-shared/api";
-import { Alert, ConfirmDialog, Spinner, toast } from "@tracht-digital-solutions/tds-shared/components";
-import { invalidate, staleClass, useCachedJson } from "@tracht-digital-solutions/tds-shared/data";
-import { FileDropZone } from "@tracht-digital-solutions/tds-shared/dropzone";
+import { apiFetch, apiUrl, sendJson } from "@tracht-digital-labs/tds-shared/api";
+import { Alert, ConfirmDialog, Spinner, toast } from "@tracht-digital-labs/tds-shared/components";
+import { invalidate, staleClass, useCachedJson } from "@tracht-digital-labs/tds-shared/data";
+import { FileDropZone } from "@tracht-digital-labs/tds-shared/dropzone";
 import {
   emptyCardDocument,
   type CardBlock,
-} from "@tracht-digital-solutions/tds-shared/schemas";
+} from "@tracht-digital-labs/tds-shared/schemas";
 
 import BlockList from "./BlockList.tsx";
 

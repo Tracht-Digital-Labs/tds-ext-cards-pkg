@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { primeRuntimeConfig } from "@tracht-digital-solutions/tds-shared/api";
-import { resetCache } from "@tracht-digital-solutions/tds-shared/data";
-import { TOAST_EVENT } from "@tracht-digital-solutions/tds-shared/toast";
+import { primeRuntimeConfig } from "@tracht-digital-labs/tds-shared/api";
+import { resetCache } from "@tracht-digital-labs/tds-shared/data";
+import { TOAST_EVENT } from "@tracht-digital-labs/tds-shared/toast";
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 

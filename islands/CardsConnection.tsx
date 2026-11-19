@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { apiFetch, sendJson } from "@tracht-digital-solutions/tds-shared/api";
-import { Alert, ConfirmDialog, Spinner, toast } from "@tracht-digital-solutions/tds-shared/components";
-import { invalidate, staleClass, useCachedJson } from "@tracht-digital-solutions/tds-shared/data";
+import { apiFetch, sendJson } from "@tracht-digital-labs/tds-shared/api";
+import { Alert, ConfirmDialog, Spinner, toast } from "@tracht-digital-labs/tds-shared/components";
+import { invalidate, staleClass, useCachedJson } from "@tracht-digital-labs/tds-shared/data";
 
 /**
  * Einstellungen → Visitenkarten: the one connection to the card site.

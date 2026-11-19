@@ -1,4 +1,4 @@
-import { defineExtension } from "@tracht-digital-solutions/tds-frontend-contract";
+import { defineExtension } from "@tracht-digital-labs/tds-frontend-contract";
 
 /**
  * Visitenkarten — business-card pages.
@@ -39,7 +39,7 @@ export default defineExtension({
     {
       id: "cards-widget",
       title: "Visitenkarten",
-      island: "@tracht-digital-solutions/tds-ext-cards/widgets/Widget.astro",
+      island: "@tracht-digital-labs/tds-ext-cards/widgets/Widget.astro",
       size: "sm",
       permission: "cards:read",
       dataEndpoint: "/cards/summary",
@@ -50,14 +50,14 @@ export default defineExtension({
     {
       id: "cards",
       label: "Visitenkarten",
-      island: "@tracht-digital-solutions/tds-ext-cards/islands/Settings.astro",
+      island: "@tracht-digital-labs/tds-ext-cards/islands/Settings.astro",
       order: 140,
     },
   ],
   routes: [
     {
       pattern: "/visitenkarten",
-      entrypoint: "@tracht-digital-solutions/tds-ext-cards/pages/Index.astro",
+      entrypoint: "@tracht-digital-labs/tds-ext-cards/pages/Index.astro",
       permission: "cards:read",
     },
   ],

@@ -1,11 +1,11 @@
 # tds-ext-cards-pkg
 
 Visitenkarten-Seiten: eine Linktree-Seite je Kunde, im Panel angelegt und von
-[`tds-card-frontend`](https://github.com/Tracht-Digital-Solutions) auf der
+[`tds-card-frontend`](https://github.com/Tracht-Digital-Labs) auf der
 eigenen Domain des Kunden ausgeliefert.
 
 Eine TDS-Panel-Erweiterung mit zwei Hälften in einem Repository: das
-Frontend-Manifest samt Oberfläche (npm, `@tracht-digital-solutions/tds-ext-cards`)
+Frontend-Manifest samt Oberfläche (npm, `@tracht-digital-labs/tds-ext-cards`)
 und das Backend-Modul (Composer, `tracht-digital-solutions/tds-ext-cards`).
 
 ## Was eine Karte ist
@@ -21,7 +21,7 @@ können.
 Die **freien Blöcke** sind alles darüber hinaus — Linkgruppen, Überschriften,
 Text, Öffnungszeiten, Profile, Trennlinien. Sie liegen als JSON in
 `card_page.blocks`, und ihr Modell steht in
-`@tracht-digital-solutions/tds-shared/schemas` (`cardBlocks`), nicht hier: den
+`@tracht-digital-labs/tds-shared/schemas` (`cardBlocks`), nicht hier: den
 Editor stellt diese Erweiterung, den Renderer das Kartenfrontend, und die beiden
 werden getrennt released. Ein Modell in einem von beiden würde auseinanderlaufen.
 `php/src/Support/CardBlocks.php` spiegelt es von Hand für den Server — dieselbe

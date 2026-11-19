@@ -2,7 +2,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import type { CardBlock } from "@tracht-digital-solutions/tds-shared/schemas";
+import type { CardBlock } from "@tracht-digital-labs/tds-shared/schemas";
 
 import BlockList from "./BlockList";
 
